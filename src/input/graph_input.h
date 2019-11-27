@@ -13,7 +13,7 @@ int count_vertices(char* file_name) {
 
     int vertices = 0;
 
-    int vertice_list[256]; //assume max vertices of graph
+    int vertice_list[256]; //all characters
 
     for(int i = 0; i < 256; i++)
         vertice_list[i] = 0;
@@ -56,18 +56,6 @@ int count_edges(char* file_name) {
     return ++edges;
 }
 
-void read_line(char* file_name) {
-
-    FILE* file = fopen(file_name, "r");
-
-    char* line = (char*) malloc(sizeof(char) * 10);
-    size_t len = 0;
-
-    while(getline(&line, &len, file) != -1) {
-        printf("%s", line);
-    }
-}
-
 Graph* input_graph(char* file_name) {
 
     int vertices = count_vertices(file_name);
@@ -86,11 +74,8 @@ Graph* input_graph(char* file_name) {
     size_t len = 0;
 
     while(getline(&line, &len, graph_file) != -1) {
-        printf("%d -> %d w: %d\n", line[0] - 65, line[3] - 65, line[6] - '0');
         add_edge(graph, line[0] - 65, line[3] - 65, line[6] - '0');
     }
-
-    print_graph(graph);
 
     return graph;
 

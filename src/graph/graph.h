@@ -104,7 +104,7 @@ void print_graph_mat(int** mat, int size) {
 
 void adj_to_mat(Graph* graph, int** mat, int non_connect) {
 
-    printf("Converting list to matrix..\n");
+    //printf("Converting list to matrix..\n");
 
     for(int i = 0; i < graph->vertices; i++) {
 
