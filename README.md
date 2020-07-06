@@ -16,3 +16,10 @@ pip install graphviz
 #### Input
 
 A CSV file with eg. row A, B, 3 where a directed edge from A to B with weight 3
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
