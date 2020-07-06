@@ -8,6 +8,8 @@ Implementation of various graph algorithms with python visualisation (still in d
 4. Dijkstra's Shortest Path
 5. Hamiltonian Cycle
 
+.. adding many more
+
 ### Python dependency
 ``` bash
 pip install graphviz
